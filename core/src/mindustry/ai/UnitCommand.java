@@ -18,6 +18,10 @@ public class UnitCommand{
     moveCommand = new UnitCommand("move", "right", u -> null){{
         drawTarget = true;
         resetTarget = false;
+    ramCommand = new UnitCommand("ram", "commandAttack", u -> null){{
+        drawTarget = true;
+        resetTarget = false;
+        
     }},
     repairCommand = new UnitCommand("repair", "modeSurvival", u -> new RepairAI()),
     rebuildCommand = new UnitCommand("rebuild", "hammer", u -> new BuilderAI()),
@@ -32,6 +36,7 @@ public class UnitCommand{
         drawTarget = true;
         resetTarget = false;
     }};
+
 
     /** Unique ID number. */
     public final int id;
