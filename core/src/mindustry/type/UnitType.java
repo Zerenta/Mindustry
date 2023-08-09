@@ -814,6 +814,8 @@ public class UnitType extends UnlockableContent{
             if(canBoost){
                 cmds.add(UnitCommand.boostCommand);
             }
+            if(canRam){
+                cmds.add(UnitCommand.ramCommand);
 
             //healing, mining and building is only supported for flying units; pathfinding to ambiguously reachable locations is hard.
             if(flying){
