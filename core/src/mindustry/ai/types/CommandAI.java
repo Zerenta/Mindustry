@@ -166,7 +166,9 @@ public class CommandAI extends AIController{
             }
 
             float engageRange = unit.type.range - 10f;
-
+            if(command = ramCommand){
+                float engageRange = 0;
+            }
             if(move){
                 if(unit.type.circleTarget && attackTarget != null){
                     target = attackTarget;
